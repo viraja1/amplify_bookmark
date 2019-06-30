@@ -103,6 +103,7 @@ export default class Main extends Component {
     let bookmarks = this.state.bookmarks;
     let tags = this.state.tags;
 
+    newBookmark.id = Math.round(new Date().getTime() / 1000) + Math.floor(Math.random() * 90000000) + 10000;
     newBookmark.owner = this.state.user.getUsername();
 
     bookmarks.unshift(newBookmark);
